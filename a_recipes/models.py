@@ -14,10 +14,9 @@ class Recipe(models.Model):
         ordering = ['title']
 
 # class Ingredients(models.Model):
-#     id = models.IntegerField(unique=True, primary_key=True)
 #     unit_of_measure=models.CharField(max_length=50)
 #     quantity=models.DecimalField(decimal_places=2)
 #     ingredient=models.IntegerField(max_length=5)
 #     notes=models.IntegerField(max_length=5)
-#     recipe_id=models.ForeignKey(Recipe, on_delete=models.CASCADE)
+#     recipe=models.OneToOneField(Recipe, on_delete=models.CASCADE,primary_key=True)
 
