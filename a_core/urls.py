@@ -21,6 +21,6 @@ from a_recipes.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_view),
+    path('', home_view, name='home'),
     path('post/create/', recipe_post_view, name='recipe_create'),
 ]

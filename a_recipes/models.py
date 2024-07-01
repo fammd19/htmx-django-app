@@ -1,7 +1,6 @@
 from django.db import models
 
 class Recipe(models.Model):
-    id = models.IntegerField(unique=True, primary_key=True)
     title=models.CharField(max_length=500)
     image=models.URLField(max_length=500)
     summary=models.TextField()
@@ -10,6 +9,9 @@ class Recipe(models.Model):
 
     def __str__(self):
         return f"ID {self.id}: {self.title}"
+
+    class Meta:
+        ordering = ['title']
 
 # class Ingredients(models.Model):
 #     id = models.IntegerField(unique=True, primary_key=True)

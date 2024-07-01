@@ -14,7 +14,6 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Recipe',
             fields=[
-                ('id', models.IntegerField(primary_key=True, serialize=False, unique=True)),
                 ('title', models.CharField(max_length=500)),
                 ('image', models.URLField(max_length=500)),
                 ('summary', models.TextField()),
