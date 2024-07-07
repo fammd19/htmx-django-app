@@ -4,39 +4,23 @@
 
 {% for recipe in recipes %}
 <article class="card">
-    <div class="flex items-center justify-between px-4 h-14">
-        <h3 class="text-start leading-5 mr-1">{{recipe.title}}</h3>
-        <div class="text-sm text-gray-400 truncate">Prep Time: {{recipe.prep_time}} mins, Cook Time: {{recipe.cook_time}} mins</div>
-    </div>
-    <figure>
-        <a href=""><img class="w-full" src={{recipe.image}}></a>
-    </figure>
-    <div class="p-4 pb-2">
-        <a class="flex items-center gap-1 mb-4" href="">
-            <span class="font-bold hover:underline">Lisa</span>
-            <span class="text-sm text-gray-400">@lisasimpson</span>
-        </a>
-        <p class="text-4xl mb-10 px-4">{{recipe.title}}</p>
-        <p class="text-2xl mb-10 px-4">{{recipe.summary}}</p>
-        
-        <div class="flex items-center gap-2 text-sm mb-5 flex-wrap">
-            
-            <a href="" class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-800 hover:text-white">Vego</a>
-            <a href="" class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-800 hover:text-white">Under an hour</a>
+    <div class="flex items-center">
+        <a href=""><img width="200px" height="200px" src={{recipe.image}}></a>
+        <div class="p-4 pb-2">
+            <h3 class="text-2xl">{{recipe.title}}</h3>
+            <div class="text-sm text-gray-400 truncate">Prep Time: {{recipe.prep_time}} mins, Cook Time: {{recipe.cook_time}} mins</div>
+            <p class="">{{recipe.summary}}</p>
         </div>
-        <div class="flex items-center justify-between text-sm px-2">
-            <a class="font-bold hover:underline" href="">
-                Comments
-                <span class="font-light text-gray-500 ml-1">3</span>
-            </a>
-            <div class="flex items-center gap-4 [&>a:hover]:underline">
-                <div class="flex items-center gap-1">
-                    <img class="w-5 -mt-1" src="https://img.icons8.com/small/24/000000/fire-heart.png">
-                    1
+        <div class="p-4 pb-2">
+            <div class="flex items-center gap-2 text-sm mb-5 flex-wrap">
+                <a href="" class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-800 hover:text-white">Vego</a>
+                <a href="" class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-800 hover:text-white">Under an hour</a>
+            </div>
+            <div class="flex items-center justify-between text-sm px-2">
+                <div class="flex items-center gap-4 [&>a:hover]:underline">
+                    <a href="">Edit</a>
+                    <a href="">Delete</a>
                 </div>
-                <a href="">Like</a>
-                <a href="">Edit</a>
-                <a href="">Delete</a>
             </div>
         </div>
     </div>
